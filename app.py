@@ -39,7 +39,7 @@ def index():
         rows = cur.fetchall()
     items = "".join(f"<li>{escape(r[0])}</li>" for r in rows)
     title = os.environ.get("APP_TITLE", "Notes")
-    return (f"<h1>{escape(title)} v2</h1>"
+    return (f"<h1>{escape(title)}</h1>"
             "<form method='post'><input name='body'><button>Add</button></form>"
             f"<ul>{items}</ul>")
 
